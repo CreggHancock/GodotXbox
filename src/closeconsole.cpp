@@ -21,11 +21,11 @@ ConsoleCloser::ConsoleCloser()
 
 ConsoleCloser::~ConsoleCloser()
 {
-	// add your cleanup here
 }
 
 void ConsoleCloser::_init()
 {
+	//check to see if we are using a debug build or not, and if it is a release build close the console
 	OS* singleton = OS::get_singleton();
 	if (singleton != nullptr && !singleton->is_debug_build())
 	{
@@ -36,5 +36,7 @@ void ConsoleCloser::_init()
 
 void ConsoleCloser::Close()
 {
+	//this is called in release builds to close the console as a temporary workaround for release builds
+	//being forced to release as SUBSYSTEM/CONSOLE. This will close the console almost immediately.
 	FreeConsole();
 }

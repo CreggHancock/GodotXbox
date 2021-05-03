@@ -29,8 +29,8 @@ namespace godot {
 		void _init(); // our initializer called by Godot
 		void _ready();
 
-		std::shared_ptr<xbox::services::system::xbox_live_user> oMyUser;
-		std::shared_ptr<xbox::services::xbox_live_context> xboxLiveContext;
+		std::shared_ptr<xbox::services::system::xbox_live_user> oMyUser; //currently signed in xbox user pointer
+		std::shared_ptr<xbox::services::xbox_live_context> xboxLiveContext; //used with certain live features such as leaderboards, etc
 		std::wstring strLoginErrors;
 
 	};
