@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{E7CE7B79-D0A9-4569-B773-B0AA8A2C6B41}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.18362.0</WindowsTargetPlatformMinVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>E:\cregg\gdnative_cpp_example\gdnative_cpp_example\godot-cpp\bin;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\cregg\gdnative_cpp_example\gdnative_cpp_example\godot-cpp\include;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\godot-cpp\include\gen;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\godot-cpp\include\core;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\godot-cpp\godot-headers\gdnative;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\godot-cpp\godot-headers;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>E:\cregg\gdnative_cpp_example\gdnative_cpp_example\godot-cpp\include\gen;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\godot-cpp\include\core;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\godot-cpp\include\;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\godot-cpp\godot-headers\;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\include\pplx;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\include\cpprest;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\include\cpprest\details;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\include\xsapi;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\cregg\gdnative_cpp_example\gdnative_cpp_example\godot-cpp\bin;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x64.2018.6.20181010.2\build\native\lib\x64\v141\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>E:\cregg\gdnative_cpp_example\godot_xbox\src;E:\cregg\gdnative_cpp_example\godot_xbox\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\include\xsapi;E:\cregg\gdnative_cpp_example\godot_xbox\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\include\pplx;E:\cregg\gdnative_cpp_example\godot_xbox\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\include;E:\cregg\gdnative_cpp_example\godot_xbox\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\include\cpprest;E:\cregg\gdnative_cpp_example\godot_xbox\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\include\cpprest\details;E:\cregg\gdnative_cpp_example\godot_xbox\godot-cpp\include\gen;E:\cregg\gdnative_cpp_example\godot_xbox\godot-cpp\include\core;E:\cregg\gdnative_cpp_example\godot_xbox\godot-cpp\include;E:\cregg\gdnative_cpp_example\godot_xbox\godot-cpp\godot-headers;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\cregg\gdnative_cpp_example\godot_xbox\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x64.2018.6.20181010.2\build\native\lib\x64\v141\Release;E:\cregg\gdnative_cpp_example\godot_xbox\godot-cpp\bin;$(LibraryPath)</LibraryPath>
+    <EmbedManifest>false</EmbedManifest>
+    <LibraryWPath>C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0;$(LibraryWPath)</LibraryWPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>E:\cregg\gdnative_cpp_example\gdnative_cpp_example\godot-cpp\godot-headers\gdnative;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\godot-cpp\include\gen;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\godot-cpp\include;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\godot-cpp\include\core;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\godot-cpp\godot-headers;E:\cregg\gdnative_cpp_example\gdnative_cpp_example\src\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libgodot-cpp.windows.debug.64.lib;cpprest141d_uwp_2_9.lib;Microsoft.Xbox.Services.141.UWP.Ship.Cpp.lib;WindowsApp.lib;windows.ui.lib;mincore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NOMINMAX;XBOX_LIVE_CREATORS_SDK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalDependencies>libgodot-cpp.windows.release.64.lib;cpprest141_uwp_2_9.lib;Microsoft.Xbox.Services.141.UWP.Ship.Cpp.lib;WindowsApp.lib;windows.ui.lib;mincore.lib;msvcrt.lib;msvcprt.lib;concrt.lib;vcruntime.lib;libvcruntime.lib;User32.lib;kernel32.Lib;windowscodecs.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>LinkVerbose</ShowProgress>
+    </Link>
+    <ClCompile>
+      <PreprocessorDefinitions>NOMINMAX;XBOX_LIVE_CREATORS_SDK;_WINDOWS;_WIN32;WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;WINAPI_FAMILY=WINAPI_FAMILY_APP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalUsingDirectories>C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\VC\vcpackages;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <CompileAsManaged>false</CompileAsManaged>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\closeconsole.cpp" />
+    <ClCompile Include="src\gdlibrary.cpp" />
+    <ClCompile Include="src\signin.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\closeconsole.h" />
+    <ClInclude Include="src\signin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.ARM.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.ARM.targets" Condition="Exists('packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.ARM.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.ARM.targets')" />
+    <Import Project="packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.x64.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.x64.targets" Condition="Exists('packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.x64.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.x64.targets')" />
+    <Import Project="packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.x86.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.x86.targets" Condition="Exists('packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.x86.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.x86.targets')" />
+    <Import Project="packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.ARM.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.ARM.targets" Condition="Exists('packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.ARM.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.ARM.targets')" />
+    <Import Project="packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x64.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x64.targets" Condition="Exists('packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x64.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x64.targets')" />
+    <Import Project="packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x86.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x86.targets" Condition="Exists('packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x86.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x86.targets')" />
+    <Import Project="packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.targets" Condition="Exists('packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.ARM.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.ARM.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.ARM.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.ARM.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.x64.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.x64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.x64.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.x64.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.x86.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.x86.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v140.x86.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.ARM.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.ARM.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.ARM.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.ARM.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x64.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x64.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x64.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x86.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x86.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x86.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\Microsoft.Xbox.Live.SDK.Cpp.UWP.targets'))" />
+  </Target>
+</Project>
