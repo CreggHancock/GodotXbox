@@ -78,7 +78,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>E:\cregg\gdnative_cpp_example\godot_xbox\src;E:\cregg\gdnative_cpp_example\godot_xbox\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\include\xsapi;E:\cregg\gdnative_cpp_example\godot_xbox\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\include\pplx;E:\cregg\gdnative_cpp_example\godot_xbox\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\include;E:\cregg\gdnative_cpp_example\godot_xbox\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\include\cpprest;E:\cregg\gdnative_cpp_example\godot_xbox\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.2018.6.20181010.2\build\native\include\cpprest\details;E:\cregg\gdnative_cpp_example\godot_xbox\godot-cpp\include\gen;E:\cregg\gdnative_cpp_example\godot_xbox\godot-cpp\include\core;E:\cregg\gdnative_cpp_example\godot_xbox\godot-cpp\include;E:\cregg\gdnative_cpp_example\godot_xbox\godot-cpp\godot-headers;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\cregg\gdnative_cpp_example\godot_xbox\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x64.2018.6.20181010.2\build\native\lib\x64\v141\Release;E:\cregg\gdnative_cpp_example\godot_xbox\godot-cpp\bin;$(LibraryPath)</LibraryPath>
+    <LibraryPath>E:\cregg\gdnative_cpp_example\godot_xbox\packages\Microsoft.Xbox.Live.SDK.Cpp.UWP.v141.x64.2018.6.20181010.2\build\native\lib\x64\v141\Release;E:\cregg\gdnative_cpp_example\godot_xbox\godot-cpp\bin;C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.27.29110\lib\x64\store;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\atlmfc\lib\x64;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\VS\lib\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.19041.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.19041.0\um\x64;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\lib\um\x64</LibraryPath>
     <EmbedManifest>false</EmbedManifest>
     <LibraryWPath>C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0;$(LibraryWPath)</LibraryWPath>
   </PropertyGroup>
@@ -127,7 +127,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Link>
-      <AdditionalDependencies>libgodot-cpp.windows.release.64.lib;cpprest141_uwp_2_9.lib;Microsoft.Xbox.Services.141.UWP.Ship.Cpp.lib;WindowsApp.lib;windows.ui.lib;mincore.lib;msvcrt.lib;msvcprt.lib;concrt.lib;vcruntime.lib;libvcruntime.lib;User32.lib;kernel32.Lib;windowscodecs.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libgodot-cpp.windows.release.64.lib;cpprest141_uwp_2_9.lib;Microsoft.Xbox.Services.141.UWP.Ship.Cpp.lib;WindowsApp.lib;windows.ui.lib;mincore.lib;concrt.lib;User32.lib;kernel32.Lib;windowscodecs.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ShowProgress>LinkVerbose</ShowProgress>
     </Link>
     <ClCompile>
