@@ -18,7 +18,7 @@
     <ClCompile Include="src\gdlibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\signin.cpp">
+    <ClCompile Include="src\xbox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\closeconsole.cpp">
@@ -26,7 +26,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\signin.h">
+    <ClInclude Include="src\xbox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\closeconsole.h">

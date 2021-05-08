@@ -146,11 +146,11 @@
   <ItemGroup>
     <ClCompile Include="src\closeconsole.cpp" />
     <ClCompile Include="src\gdlibrary.cpp" />
-    <ClCompile Include="src\signin.cpp" />
+    <ClCompile Include="src\xbox.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\closeconsole.h" />
-    <ClInclude Include="src\signin.h" />
+    <ClInclude Include="src\xbox.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

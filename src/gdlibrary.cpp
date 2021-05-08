@@ -1,4 +1,4 @@
-#include "signin.h"
+#include "xbox.h"
 #include "closeconsole.h"
 
 
@@ -14,6 +14,6 @@ extern "C" void GDN_EXPORT godot_gdnative_terminate(godot_gdnative_terminate_opt
 extern "C" void GDN_EXPORT godot_nativescript_init(void* handle) {
 	godot::Godot::nativescript_init(handle);
 
-	godot::register_class<godot::SignIn>();
+	godot::register_class<godot::Xbox>();
 	godot::register_class<godot::ConsoleCloser>();
 }
