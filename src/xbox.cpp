@@ -7,11 +7,13 @@
 #include <codecvt>
 #include <concrt.h>
 #include <windows.ui.core.h>
+#include <windows.gaming.xboxlive.storage.h>
 
 
 using namespace godot;
 using namespace xbox::services::stats::manager;
 using namespace xbox::services;
+using namespace Windows::Gaming::XboxLive::Storage;
 
 
 
@@ -23,6 +25,7 @@ void Xbox::_register_methods()
 	register_method("GetGamertag", &Xbox::GetGamertag);
 	register_method("IsSignedIn", &Xbox::IsSignedIn);
 	register_method("SetStat", &Xbox::SetStatForUser);
+	register_method("DeleteStat", &Xbox::DeleteStatForUser);
 	register_method("QueryLeaderboard", &Xbox::QueryLeaderboard);
 	register_method("QueryLeaderboardSkipToRank", &Xbox::QueryLeaderboardSkipToRank);
 	register_method("QueryLeaderboardSkipToSelf", &Xbox::QueryLeaderboardSkipToSelf);
@@ -445,7 +448,7 @@ void Xbox::UpdateLeaderboardEntries(_In_ std::vector<xbox::services::leaderboard
 			entryDict["gamerTag"] = String(entry.gamertag().c_str());
 			leaderboardEntries.append(entryDict);
 		}
-	}
+	} 
 	else
 	{
 		Godot::print("entry size is 0");

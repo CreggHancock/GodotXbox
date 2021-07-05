@@ -1,0 +1,14 @@
+[general]
+
+singleton=false
+load_once=true
+symbol_prefix="godot_"
+reloadable=false
+
+[entry]
+
+UWP.64="res://addons/godot_xbox/godot_xbox.dll"
+
+[dependencies]
+
+UWP.64=[  ]

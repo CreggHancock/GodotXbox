@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/Leaderboards.gd" type="Script" id=1]
+
+[node name="Leaderboards" type="VBoxContainer"]
+margin_right = 112.0
+margin_bottom = 86.0
+alignment = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+title_path = NodePath("Title")
+leaderboard_entry_paths = [ NodePath("1"), NodePath("2"), NodePath("3"), NodePath("4"), NodePath("5") ]
+
+[node name="Title" type="Label" parent="."]
+visible = false
+margin_top = 36.0
+margin_right = 112.0
+margin_bottom = 50.0
+text = "TOP SCORES"
+align = 1
+
+[node name="1" type="Label" parent="."]
+visible = false
+margin_top = 36.0
+margin_right = 112.0
+margin_bottom = 50.0
+text = "1. User"
+align = 1
+
+[node name="2" type="Label" parent="."]
+visible = false
+margin_top = 27.0
+margin_right = 112.0
+margin_bottom = 41.0
+text = "2. User"
+align = 1
+
+[node name="3" type="Label" parent="."]
+visible = false
+margin_top = 36.0
+margin_right = 112.0
+margin_bottom = 50.0
+text = "3. User"
+align = 1
+
+[node name="4" type="Label" parent="."]
+visible = false
+margin_top = 45.0
+margin_right = 112.0
+margin_bottom = 59.0
+text = "4. User"
+align = 1
+
+[node name="5" type="Label" parent="."]
+visible = false
+margin_top = 54.0
+margin_right = 112.0
+margin_bottom = 68.0
+text = "5. User"
+align = 1

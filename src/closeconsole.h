@@ -6,9 +6,8 @@
 namespace godot {
 
 	class ConsoleCloser : public Node {
-
-	private:
 		GODOT_CLASS(ConsoleCloser, Node);
+		
 
 	public:
 		static void _register_methods();

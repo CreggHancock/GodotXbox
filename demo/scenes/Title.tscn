@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scripts/Title.gd" type="Script" id=1]
+[ext_resource path="res://scenes/World.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Simpletown.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "signingin"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "Signing In", "Signing In.", "Signing in..", "Signing In..." ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 48
+font_data = ExtResource( 3 )
+
+[node name="Title" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+world_scene = ExtResource( 2 )
+player_name_path = NodePath("CanvasLayer/XBLLabel")
+player_animation_path = NodePath("CanvasLayer/XBLLabel/AnimationPlayer")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="XBLLabel" type="Label" parent="CanvasLayer"]
+anchor_left = 0.01
+anchor_top = 0.99
+anchor_right = 0.01
+anchor_bottom = 0.99
+margin_top = -14.0
+margin_right = 113.0
+grow_vertical = 0
+custom_fonts/font = SubResource( 1 )
+text = "Signing In"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/XBLLabel"]
+anims/signingin = SubResource( 2 )
+
+[node name="ProceedLabel" type="Label" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -49.0
+margin_top = -7.0
+margin_right = 49.0
+margin_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 3 )
+text = "Press A to Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -41.0
+margin_right = 41.0
+margin_bottom = 14.0
+grow_horizontal = 2
+custom_fonts/font = SubResource( 4 )
+text = "
+Demo Game"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
