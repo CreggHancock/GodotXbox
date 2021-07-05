@@ -8,7 +8,7 @@ bugs that do not have workarounds. Please report such issues to Godot's official
 ## Setup
 1. Add the godot_xbox dll to your project.
 2. Setup a gdnlib file to link to the dll.
-3. Setup a gdns file fo both the SignIn class and ConsoleCloser class. 
+3. Setup a gdns file fo both the Xbox class and ConsoleCloser class. 
 4. Create instances of nodes for both classes. These can be autoloads or instanced in a scene that wont be going away.
 
 GodotXbox will attempt to sign in silently once the node hits its _ready(). If a silent sign-in fails you will be required to tell the DLL to sign in manually. 
@@ -20,12 +20,27 @@ GodotXbox will attempt to sign in silently once the node hits its _ready(). If a
 - **void** `SignInManually()` Call this to tell windows to attempt to sign you in manually. If you are not already signed in, this should create a popup asking you to sign in.
 - **bool** `IsSignedIn()` Returns whether the current user is signed in. If there is no user, returns false.
 - **String** `GetGamertag()` Returns the currently signed in user's gamertag if a user is signed in, otherwise returns an error message.
+- **void** `SetStat(String statName, Variant statValue)` Set the currently signed in user's stat. Use the leaderboard stat ID created in Partner Center. Valid value types for statValue at this time are floats and integer.
+- **void** `DeleteStat(String statName)` Deletes the user's current stat.
+- **void** `QueryLeaderboard(String statName, int maxItems = 0)` Try to fetch the leaderboard with the given name. Setting maxItems a number higher than 0 will limit the amount of returned leaderboard values to that amount.
+- **void** `QueryLeaderboardSkipToRank(String statName, int rank, int maxItems = 0)` Try to fetch the leaderboard with the given name and skips to rank in leaderboard. Setting maxItems a number higher than 0 will limit the amount of returned leaderboard values to that amount.
+- **void** `QueryLeaderboardSkipToSelf(String statName, int maxItems = 0)` Try to fetch the leaderboard with the given name and skips to current user's position. Setting maxItems a number higher than 0 will limit the amount of returned leaderboard values to that amount.
+- **void** `QueryLeaderboardForSocialGroup(String statName, String socialGroup, int maxItems = 0)` Try to fetch the leaderboard with the given name and xbox live social group. Setting maxItems a number higher than 0 will limit the amount of returned leaderboard values to that amount.
+- **Array** `GetLeaderboardEntries()` Returns the most recently queried leaderboard entries as an array of dictionaries. Each dictionary represents an entry with keys "gamertag", "score", "rank", and "ID". Every value for these keys are strings except for rank, which is an int.
+- **Variant** `GetStat(String statName)` Gets a user's stat and returns it as a Godot Variant. Returns -1 if user isn't signed in or if there is an error. Returns "undefined" if the stat hasn't been set.
+
+
 
 ### Signals
 
 - `signed_out` Called when the user gets signed out. 
 - `signed_in` Called when the user successfully signs in.
 - `signin_failed` Called when the signin fails. This would be when you have to handly signing in manually if a silent sign in fails, for instance. 
+- `leaderboards_ready` Called when a leaderboard query has completed. Passing in a Dictionary with a single key "entries" and value of type Array. The Array is an Array of Dictionary entries. See `GetLeaderbaordEntries()` for info on these entries.
+- `stat_user_added` Called when the local user is added to the xbox live stats manager. Don't attempt to query leaderboards or update/get stats for a player before this is called.
+- `stat_user_removed` Called when the local user is removed from the xbox live stats manager. Don't attempt to query leaderboards or update/get stats for a player after this is called.
+- `player_stats_updated` Called when a SetStat() has completed successfully and player's stats are updated on the leaderboard.
+
 
 ## Exporting
 
